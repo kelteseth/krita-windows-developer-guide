@@ -21,7 +21,43 @@ There is a bug if you want to close the window it crashes. Nonetheless it should
   - Run:
 
 ```js
-pacman -S mingw64/mingw-w64-x86\_64-karchive-qt5 mingw64/mingw-w64-x86\_64-kconfig-qt5 mingw64/mingw-w64-x86\_64-kwidgetsaddons-qt5 mingw64/mingw-w64-x86\_64-kcompletion-qt5 mingw64/mingw-w64-x86\_64-kcoreaddons-qt5 mingw64/mingw-w64-x86\_64-kguiaddons-qt5 mingw64/mingw-w64-x86\_64-ki18n-qt5 mingw64/mingw-w64-x86\_64-kitemmodels-qt5 mingw64/mingw-w64-x86\_64-kitemviews-qt5 mingw64/mingw-w64-x86\_64-kwindowsystem-qt5 mingw64/mingw-w64-x86\_64-extra-cmake-modules mingw64/mingw-w64-x86\_64-gcc mingw64/mingw-w64-x86\_64-gdb  mingw64/mingw-w64-x86\_64-qt5  mingw64/mingw-w64-x86\_64-qt-creator mingw64/mingw-w64-x86\_64-libwinpthread-git mingw64/mingw-w64-x86\_64-winpthreads-git mingw64/mingw-w64-x86\_64-libpng mingw64/mingw-w64-x86\_64-boost mingw64/mingw-w64-x86\_64-gsl mingw64/mingw-w64-x86\_64-zlib mingw64/mingw-w64-x86\_64-openexr mingw64/mingw-w64-x86\_64-ilmbase mingw64/mingw-w64-x86\_64-libtiff mingw64/mingw-w64-x86\_64-libraw mingw64/mingw-w64-x86\_64-opencolorio-git mingw64/mingw-w64-x86\_64-eigen3 mingw64/mingw-w64-x86\_64-gexiv2 mingw64/mingw-w64-x86\_64-lcms2 mingw64/mingw-w64-x86\_64-poppler mingw64/mingw-w64-x86\_64-openjpeg2 mingw64/mingw-w64-x86\_64-libjpeg-turbo mingw64/mingw-w64-x86\_64-gslmingw64/mingw-w64-x86\_64-opencolorio-gitgit 
+pacman -S 
+mingw64/mingw-w64-x86_64-karchive-qt5 
+mingw64/mingw-w64-x86_64-kconfig-qt5 
+mingw64/mingw-w64-x86_64-kwidgetsaddons-qt5 
+mingw64/mingw-w64-x86_64-kcompletion-qt5 
+mingw64/mingw-w64-x86_64-kcoreaddons-qt5 
+mingw64/mingw-w64-x86_64-kguiaddons-qt5 
+mingw64/mingw-w64-x86_64-ki18n-qt5 
+mingw64/mingw-w64-x86_64-kitemmodels-qt5 
+mingw64/mingw-w64-x86_64-kitemviews-qt5 
+mingw64/mingw-w64-x86_64-kwindowsystem-qt5 
+mingw64/mingw-w64-x86_64-extra-cmake-modules 
+mingw64/mingw-w64-x86_64-gcc 
+mingw64/mingw-w64-x86_64-gdb  
+mingw64/mingw-w64-x86_64-qt5  
+mingw64/mingw-w64-x86_64-qt-creator 
+mingw64/mingw-w64-x86_64-libwinpthread-git 
+mingw64/mingw-w64-x86_64-winpthreads-git 
+mingw64/mingw-w64-x86_64-libpng 
+mingw64/mingw-w64-x86_64-boost 
+mingw64/mingw-w64-x86_64-gsl 
+mingw64/mingw-w64-x86_64-zlib 
+mingw64/mingw-w64-x86_64-openexr 
+mingw64/mingw-w64-x86_64-ilmbase 
+mingw64/mingw-w64-x86_64-libtiff 
+mingw64/mingw-w64-x86_64-libraw 
+mingw64/mingw-w64-x86_64-opencolorio-git 
+mingw64/mingw-w64-x86_64-eigen3 
+mingw64/mingw-w64-x86_64-gexiv2 
+mingw64/mingw-w64-x86_64-lcms2 
+mingw64/mingw-w64-x86_64-poppler 
+mingw64/mingw-w64-x86_64-openjpeg2 
+mingw64/mingw-w64-x86_64-libjpeg-turbo 
+mingw64/mingw-w64-x86_64-gsl
+mingw64/mingw-w64-x86_64-opencolorio-git
+git
+
 ```
 ### 3 Download Krita via git
 
