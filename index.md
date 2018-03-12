@@ -1,37 +1,51 @@
-## Welcome to GitHub Pages
+## Start developing Krita on Windows in 5 minutes with MSYS2
 
-You can use the [editor on GitHub](https://github.com/kelteseth/krita-windows-developer-guide/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+### 1 Pre Requirements
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Download and install MSYS2 x86\_x64 from [http://www.msys2.org/](http://www.msys2.org/)
 
-### Markdown
+- Start MSYS2
+- Update the repositories
+  - Run: pacman -Syu
+  - Restart terminal. **Ignore** these errors:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+"warning: terminate MSYS2 without returning to shell and check for updates again. warning: for example close your terminal window instead of calling exit"
 
-```markdown
-Syntax highlighted code block
+There is a bug if you want to close the window it crashes. Nonetheless it should work!
+  - Run: pacman -Su
+  - Wait for the updates to be installed
 
-# Header 1
-## Header 2
-### Header 3
+### 2 Install Dependencies
 
-- Bulleted
-- List
+- We cheat here because this can take some time depending on your internet connection and you don&#39;t have to do anything :)
+  - Run:
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```js
+pacman -S mingw64/mingw-w64-x86\_64-karchive-qt5 mingw64/mingw-w64-x86\_64-kconfig-qt5 mingw64/mingw-w64-x86\_64-kwidgetsaddons-qt5 mingw64/mingw-w64-x86\_64-kcompletion-qt5 mingw64/mingw-w64-x86\_64-kcoreaddons-qt5 mingw64/mingw-w64-x86\_64-kguiaddons-qt5 mingw64/mingw-w64-x86\_64-ki18n-qt5 mingw64/mingw-w64-x86\_64-kitemmodels-qt5 mingw64/mingw-w64-x86\_64-kitemviews-qt5 mingw64/mingw-w64-x86\_64-kwindowsystem-qt5 mingw64/mingw-w64-x86\_64-extra-cmake-modules mingw64/mingw-w64-x86\_64-gcc mingw64/mingw-w64-x86\_64-gdb  mingw64/mingw-w64-x86\_64-qt5  mingw64/mingw-w64-x86\_64-qt-creator mingw64/mingw-w64-x86\_64-libwinpthread-git mingw64/mingw-w64-x86\_64-winpthreads-git mingw64/mingw-w64-x86\_64-libpng mingw64/mingw-w64-x86\_64-boost mingw64/mingw-w64-x86\_64-gsl mingw64/mingw-w64-x86\_64-zlib mingw64/mingw-w64-x86\_64-openexr mingw64/mingw-w64-x86\_64-ilmbase mingw64/mingw-w64-x86\_64-libtiff mingw64/mingw-w64-x86\_64-libraw mingw64/mingw-w64-x86\_64-opencolorio-git mingw64/mingw-w64-x86\_64-eigen3 mingw64/mingw-w64-x86\_64-gexiv2 mingw64/mingw-w64-x86\_64-lcms2 mingw64/mingw-w64-x86\_64-poppler mingw64/mingw-w64-x86\_64-openjpeg2 mingw64/mingw-w64-x86\_64-libjpeg-turbo mingw64/mingw-w64-x86\_64-gslmingw64/mingw-w64-x86\_64-opencolorio-gitgit 
 ```
+### 3 Download Krita via git
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+- Open MSYS2 shell
+- Run: cd to/your/desired/destination
+- Run: git clone git://anongit.kde.org/krita
+- You also could use a GUI for this like [GitExtentions](https://github.com/gitextensions/gitextensions/releases)!
 
-### Jekyll Themes
+### 4 Compiling Krita
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kelteseth/krita-windows-developer-guide/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+1. Start QtCreator (C:\msys64\mingw64\bin\qtcreator.exe)  and open the CMakeLists.txt from the krita folder via "Open Project"
+2.Configure the project as 64bit. Click Configure project
+3. Wait for "CMake Project was parsed successfully" in the General Message tab. This can take some time!
 
-### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+4. Go to "Projects" on the left and under &quot;Build Steps&quot;
+    1. Change the CMAKE\_INSTALL\_PREFIX to a writable location like next to your source code! This is due to how plugins work in Krita [More info here!](https://www.reddit.com/r/krita/comments/7m3hnn/ive_made_a_quick_guide_for_developing_krita_on/drrthbz/)
+    2. Press the "Add Build Step" Button
+        1. Select Build in the dropdown
+        2. remove the all checkbox and enable the install checkbox
+5. Compile via the big green arrow on the bottom left
+6. Compiling can take quite some time. It takes at least 15-20 minutes on my 8 Core Ryzen 1700
+7. Happy Hacking!
+
+//Optional add the bin folder to your windows path to open Qtcreator via windows search ;)
+C:\msys64\mingw64\bin
+
